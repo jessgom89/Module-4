@@ -1,0 +1,10 @@
+header{
+display: flex;
+flex-wrap: wrap;
+}
+header h4{
+width: 50%;    
+}
+#timeheader{
+text-align: right;    
+}
