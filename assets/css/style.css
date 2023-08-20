@@ -2,9 +2,18 @@ header{
 display: flex;
 flex-wrap: wrap;
 }
+main #introduction{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+width: 100%;    
+}
 header h4{
 width: 50%;    
 }
 #timeheader{
 text-align: right;    
+}
+.hide{
+display: none;    
 }
