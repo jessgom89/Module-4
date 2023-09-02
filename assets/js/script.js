@@ -10,8 +10,17 @@ var choice2 = document.getElementById("choice2")
 var choice3 = document.getElementById("choice3")
 var choice4 = document.getElementById("choice4") 
 var choicelist = document.getElementById("choicelist")
+var initialsection = document.getElementById("intialsection")
+var initial = document.getElementById("initial")
+var savebtn = document.getElementById("savebtn")
+var highscore = document.getElementById("highscore")
+var scores = document.getElementById("scores")
+var gobackbutton = document.getElementById("gobackbutton")
+var clearbutton = document.getElementById("clearbutton")
+var clearbtn = document.getElementById("claerbtn")
 var timeid =""
 var index = 0
+var allscores=[]
 var questions =[{
  title:"q1", 
  choices:["c1","c2","c3","c4"],
@@ -70,10 +79,26 @@ if(index<questions.length){
 displayQuestion() 
 }
 else{
-clearInterval(timeid)    
+clearInterval(timeid)  
+initialsection.classList.remove("hide")
+question.classList.add("hide")  
 }
    
 }    
     
 } 
+function saveinital(){
+allscores.push({
+score:time.textContent,
+initial:initial.value
+
+   
+})
+localStorage.setItem("allscores",JSON.stringify(allscores))
+initialsection.classList.add("hide")
+highscore.classList.remove("hide")
+
+}
+function102
 choicelist.addEventListener("click",nextQestion)
+sabebtn.addEventListener("click",saveinital)
